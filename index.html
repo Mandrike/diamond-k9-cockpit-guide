@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
   <link rel="apple-touch-icon" sizes="192x192" href="assets/icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css?v=20260711-dk9-icons">
+  <link rel="stylesheet" href="styles.css?v=20260711-fankit-assets">
 </head>
 <body>
   <div class="app-shell">
@@ -63,6 +63,7 @@
         </div>
         <div class="ship-visual" aria-hidden="true">
           <img id="shipImage" src="assets/cockpit-panel.svg" alt="">
+          <img id="manufacturerLogo" class="manufacturer-logo" src="" alt="" hidden>
           <div id="shipCallsign" class="ship-callsign"></div>
         </div>
       </section>
@@ -217,10 +218,14 @@
           <div id="noteList" class="note-list"></div>
         </div>
       </section>
+
+      <footer class="asset-notice">
+        Unofficial Star Citizen fan site. Selected visuals use local RSI Fan Kit assets; Star Citizen content belongs to its owners.
+      </footer>
     </main>
   </div>
 
-  <script src="data/ships.js?v=20260711-dk9-icons"></script>
-  <script src="app.js?v=20260711-dk9-icons"></script>
+  <script src="data/ships.js?v=20260711-fankit-assets"></script>
+  <script src="app.js?v=20260711-fankit-assets"></script>
 </body>
 </html>

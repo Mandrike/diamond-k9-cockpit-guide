@@ -540,9 +540,30 @@ h3 {
   opacity: 0.92;
 }
 
+.ship-visual img[src*="assets/fankit/wallpapers"] {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  opacity: 0.76;
+}
+
 .ship-visual img[src*="module-"] {
   width: min(58%, 190px);
   filter: drop-shadow(0 0 22px rgba(66, 194, 186, 0.22));
+}
+
+.manufacturer-logo {
+  position: absolute !important;
+  z-index: 3 !important;
+  left: 14px;
+  bottom: 12px;
+  width: auto !important;
+  max-width: 112px;
+  max-height: 38px !important;
+  object-fit: contain !important;
+  opacity: 0.88 !important;
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.7));
 }
 
 .ship-callsign {
@@ -987,10 +1008,12 @@ h3 {
 }
 
 .ship-guide-visual {
+  position: relative;
   display: grid;
   place-items: center;
   width: 92px;
-  min-height: 92px;
+  height: 100%;
+  min-height: 126px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -999,10 +1022,24 @@ h3 {
     #0b1119;
 }
 
-.ship-guide-visual img {
-  width: 84px;
-  max-height: 84px;
+.ship-guide-image {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  opacity: 0.84;
+}
+
+.ship-guide-logo {
+  position: absolute;
+  left: 7px;
+  bottom: 7px;
+  width: auto;
+  max-width: 64px;
+  max-height: 22px;
   object-fit: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.82));
 }
 
 .ship-guide-copy,
@@ -1070,11 +1107,47 @@ h3 {
     rgba(8, 12, 18, 0.9);
 }
 
+.loadout-item-top {
+  display: grid;
+  grid-template-columns: minmax(118px, 138px) minmax(0, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
 .loadout-item-header {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   align-items: flex-start;
+}
+
+.loadout-ship-thumb {
+  position: relative;
+  min-height: 92px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #0b1119;
+}
+
+.loadout-ship-thumb > img:not(.loadout-ship-logo) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.86;
+}
+
+.loadout-ship-thumb .loadout-ship-logo {
+  position: absolute;
+  left: 7px;
+  bottom: 7px;
+  width: auto;
+  height: auto;
+  max-width: 68px;
+  max-height: 22px;
+  object-fit: contain;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.82));
 }
 
 .loadout-item-title {
@@ -1170,6 +1243,13 @@ h3 {
   grid-template-columns: minmax(280px, 1.2fr) minmax(250px, 0.9fr) minmax(250px, 0.9fr);
   gap: 18px;
   align-items: start;
+}
+
+.asset-notice {
+  margin-top: 18px;
+  color: var(--quiet);
+  font-size: 0.76rem;
+  line-height: 1.4;
 }
 
 .content-column {
@@ -1372,12 +1452,11 @@ kbd {
 
   .ship-guide-visual {
     width: 76px;
-    min-height: 76px;
+    min-height: 112px;
   }
 
-  .ship-guide-visual img {
-    width: 68px;
-    max-height: 68px;
+  .ship-guide-logo {
+    max-width: 54px;
   }
 
   .stat-grid {
@@ -1402,6 +1481,14 @@ kbd {
   .deck-topbar {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .loadout-item-top {
+    grid-template-columns: 1fr;
+  }
+
+  .loadout-ship-thumb {
+    min-height: 130px;
   }
 }
 

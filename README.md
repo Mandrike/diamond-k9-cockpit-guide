@@ -76,7 +76,13 @@ The app separates guide areas like this:
 - `Skibskøb`: searchable in-game UEC prices and buy locations for the guide ships plus practical transport and ground vehicles. Prices are sourced from UEX and should be live-checked before large purchases.
 - `Loadouts`: searchable buyable component and weapon shortlists per ship, with UEX/Erkul links. The section prefers direct in-game purchases and flags stronger parts when they appear to be rent/craft/loot-only.
 
-The Diamond K9 PNG artwork is committed under `assets/org/diamond-k9-mark.png`, browser/PWA and module icons are committed under `assets/icons/`, and page/banner backgrounds are committed under `assets/backgrounds/`. GitHub Pages, the local PowerShell server, and the portable EXE all serve those repository assets directly.
+The Diamond K9 PNG artwork is committed under `assets/org/diamond-k9-mark.png`, browser/PWA and module icons are committed under `assets/icons/`, and page/banner backgrounds are committed under `assets/backgrounds/`. Selected local RSI Fan Kit visuals are committed under `assets/fankit/`:
+
+- `assets/fankit/wallpapers/`: selected official social/wallpaper images used for ship guide cards, ship detail visuals, and loadout thumbnails.
+- `assets/fankit/logos/`: selected official manufacturer logos used as overlays where the Fan Kit contains a matching manufacturer.
+- `assets/fankit/holoviewers/`: official CTM HoloViewer models currently kept only as source assets for Cutlass Black and RSI Constellation Aquila; the static guide does not render CTM models yet.
+
+GitHub Pages, the local PowerShell server, and the portable EXE all serve those repository assets directly. Do not commit the full Fan Kit ZIP; it is too large for this static guide and should remain an external source download.
 
 The initial keybind set is based on the standard keyboard/mouse layout documented by Star Citizen community references and the in-game reset/profile workflow from RSI support. Star Citizen keybinds can drift between patches, so verify critical commands in-game after major updates.
 
@@ -92,7 +98,12 @@ Sale note links are inferred in `data/ships.js`:
 - refinery notes link to UEX Mining Refineries
 - mineral/gem notes link to UEX Mining Pricing or Mining Locations
 
-Ship visuals are local SVG files under `assets/ships/`. They are schematic guide images, not external hotlinked assets.
+Ship visuals are local repository files, not external hotlinks. Current ship guide photos use selected RSI Fan Kit wallpapers where available, while older schematic SVGs remain under `assets/ships/` as fallback/reference assets. Not every Fan Kit image is an exact model render for the named ship; the Fan Kit has limited direct ship-specific stills.
+
+This is an unofficial Star Citizen fan site. Star Citizen content and external game assets belong to their respective owners. Source references:
+
+- RSI Fan Kit: `https://robertsspaceindustries.com/en/fankit`
+- RSI Fan Kit and Fandom FAQ: `https://support.robertsspaceindustries.com/hc/en-us/articles/360006895793-Star-Citizen-Fankit-and-Fandom-FAQ`
 
 ## Rollback
 

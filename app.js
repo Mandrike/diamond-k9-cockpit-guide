@@ -33,6 +33,7 @@
     shipSummary: document.getElementById("shipSummary"),
     shipStats: document.getElementById("shipStats"),
     shipImage: document.getElementById("shipImage"),
+    manufacturerLogo: document.getElementById("manufacturerLogo"),
     shipCallsign: document.getElementById("shipCallsign"),
     quickActionList: document.getElementById("quickActionList"),
     saleTitle: document.getElementById("saleTitle"),
@@ -215,6 +216,48 @@
     return element;
   }
 
+  function getManufacturerLogo(ship) {
+    var manufacturer = normalize(ship && ship.manufacturer);
+
+    if (!manufacturer) {
+      return "";
+    }
+
+    if (manufacturer.indexOf("crusader") !== -1) {
+      return "assets/fankit/logos/crusader-white.png";
+    }
+
+    if (manufacturer.indexOf("drake") !== -1) {
+      return "assets/fankit/logos/drake-white.png";
+    }
+
+    if (manufacturer.indexOf("anvil") !== -1) {
+      return "assets/fankit/logos/anvil-white.png";
+    }
+
+    if (manufacturer.indexOf("argo") !== -1) {
+      return "assets/fankit/logos/argo-light.png";
+    }
+
+    if (manufacturer.indexOf("tumbril") !== -1) {
+      return "assets/fankit/logos/tumbril-white.png";
+    }
+
+    if (manufacturer.indexOf("rsi") !== -1 || manufacturer.indexOf("roberts space industries") !== -1) {
+      return "assets/fankit/logos/rsi-white.png";
+    }
+
+    return "";
+  }
+
+  function findShipByName(name) {
+    var normalizedName = normalize(name);
+
+    return ships.find(function (ship) {
+      return normalize(ship.name) === normalizedName;
+    }) || null;
+  }
+
   function renderShipList() {
     var navigationItems = getNavigationItems();
     elements.shipList.textContent = "";
@@ -268,6 +311,17 @@
     elements.shipCallsign.textContent = ship.callsign;
     elements.shipImage.src = ship.image || "assets/cockpit-panel.svg";
     elements.shipImage.alt = ship.name;
+
+    var manufacturerLogo = getManufacturerLogo(ship);
+    if (manufacturerLogo) {
+      elements.manufacturerLogo.src = manufacturerLogo;
+      elements.manufacturerLogo.alt = ship.manufacturer + " logo";
+      elements.manufacturerLogo.hidden = false;
+    } else {
+      elements.manufacturerLogo.hidden = true;
+      elements.manufacturerLogo.removeAttribute("src");
+      elements.manufacturerLogo.alt = "";
+    }
 
     elements.roleTags.textContent = "";
     ship.tags.forEach(function (tag) {
@@ -543,6 +597,7 @@
       var card = createElement("button", "ship-guide-card");
       var visual = createElement("span", "ship-guide-visual");
       var image = document.createElement("img");
+      var manufacturerLogo = getManufacturerLogo(guideShip);
       var copy = createElement("span", "ship-guide-copy");
       var header = createElement("span", "ship-guide-card-header");
       var titleWrap = createElement("span");
@@ -556,9 +611,18 @@
       card.dataset.guideShipId = guideShip.id;
       card.setAttribute("aria-label", "Åbn " + guideShip.name);
 
+      image.className = "ship-guide-image";
       image.src = guideShip.image || "assets/cockpit-panel.svg";
       image.alt = "";
       visual.appendChild(image);
+
+      if (manufacturerLogo) {
+        var logo = document.createElement("img");
+        logo.className = "ship-guide-logo";
+        logo.src = manufacturerLogo;
+        logo.alt = "";
+        visual.appendChild(logo);
+      }
 
       titleWrap.appendChild(title);
       titleWrap.appendChild(role);
@@ -752,6 +816,9 @@
 
     items.forEach(function (item) {
       var card = createElement("article", "loadout-item");
+      var sourceShip = findShipByName(item.name);
+      var top = createElement("div", "loadout-item-top");
+      var visual = null;
       var header = createElement("div", "loadout-item-header");
       var titleWrap = createElement("div");
       var title = createElement("h4", "loadout-item-title", item.name);
@@ -760,10 +827,32 @@
       var tags = createElement("div", "system-service-row");
       var partList = createElement("div", "loadout-part-list");
 
+      if (sourceShip && sourceShip.image) {
+        visual = createElement("div", "loadout-ship-thumb");
+
+        var image = document.createElement("img");
+        image.src = sourceShip.image;
+        image.alt = "";
+        visual.appendChild(image);
+
+        var manufacturerLogo = getManufacturerLogo(sourceShip);
+        if (manufacturerLogo) {
+          var logo = document.createElement("img");
+          logo.className = "loadout-ship-logo";
+          logo.src = manufacturerLogo;
+          logo.alt = "";
+          visual.appendChild(logo);
+        }
+      }
+
       titleWrap.appendChild(title);
       titleWrap.appendChild(meta);
       header.appendChild(titleWrap);
       header.appendChild(pill);
+      if (visual) {
+        top.appendChild(visual);
+      }
+      top.appendChild(header);
 
       item.parts.forEach(function (part) {
         partList.appendChild(renderLoadoutPart(part));
@@ -773,7 +862,7 @@
         tags.appendChild(createElement("span", "system-service-tag", tag));
       });
 
-      card.appendChild(header);
+      card.appendChild(top);
       card.appendChild(createElement("p", "loadout-summary", item.summary));
       card.appendChild(partList);
       card.appendChild(tags);
