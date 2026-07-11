@@ -241,14 +241,20 @@
     }
 
     var strip = createElement("span", "ship-strip");
-    var copy = createElement("span");
+    var icon = document.createElement("img");
+    var copy = createElement("span", "ship-button-copy");
     var title = createElement("span", "ship-button-title", ship.name);
     var role = createElement("span", "ship-button-role", ship.primaryRole);
     var pill = createElement("span", "ship-pill", ship.statusLabel);
 
+    icon.className = "ship-button-icon";
+    icon.src = ship.navIcon || ship.image || "assets/cockpit-panel.svg";
+    icon.alt = "";
+
     copy.appendChild(title);
     copy.appendChild(role);
     button.appendChild(strip);
+    button.appendChild(icon);
     button.appendChild(copy);
     button.appendChild(pill);
 

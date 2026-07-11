@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Standard keys">
+  <defs>
+    <linearGradient id="keysGlow" x1="21" y1="98" x2="107" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f1c84b"/>
+      <stop offset="0.5" stop-color="#42c2ba"/>
+      <stop offset="1" stop-color="#82aaff"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="18" fill="#080d14"/>
+  <rect x="20" y="36" width="88" height="56" rx="10" fill="#121a25" stroke="url(#keysGlow)" stroke-width="5"/>
+  <g fill="#f4f0e8" opacity="0.88">
+    <rect x="32" y="48" width="10" height="10" rx="2"/>
+    <rect x="48" y="48" width="10" height="10" rx="2"/>
+    <rect x="64" y="48" width="10" height="10" rx="2"/>
+    <rect x="80" y="48" width="10" height="10" rx="2"/>
+    <rect x="96" y="48" width="8" height="10" rx="2"/>
+    <rect x="32" y="65" width="10" height="10" rx="2"/>
+    <rect x="48" y="65" width="10" height="10" rx="2"/>
+    <rect x="64" y="65" width="10" height="10" rx="2"/>
+    <rect x="80" y="65" width="24" height="10" rx="2"/>
+    <rect x="32" y="80" width="44" height="8" rx="2"/>
+    <rect x="82" y="80" width="22" height="8" rx="2"/>
+  </g>
+  <path d="M24 104h80" stroke="#42c2ba" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+</svg>

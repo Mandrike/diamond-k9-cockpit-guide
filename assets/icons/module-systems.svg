@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Solsystemer">
+  <defs>
+    <linearGradient id="systemsGlow" x1="18" y1="110" x2="108" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#42c2ba"/>
+      <stop offset="0.58" stop-color="#82aaff"/>
+      <stop offset="1" stop-color="#f1c84b"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="18" fill="#080d14"/>
+  <circle cx="64" cy="64" r="10" fill="#f1c84b"/>
+  <circle cx="64" cy="64" r="6" fill="#fff4a8"/>
+  <ellipse cx="64" cy="64" rx="47" ry="17" fill="none" stroke="url(#systemsGlow)" stroke-width="5"/>
+  <ellipse cx="64" cy="64" rx="26" ry="53" fill="none" stroke="#42c2ba" stroke-width="4" opacity="0.76" transform="rotate(34 64 64)"/>
+  <circle cx="94" cy="52" r="8" fill="#82aaff"/>
+  <circle cx="32" cy="82" r="5" fill="#ef756f"/>
+  <path d="M26 27h14M88 97h18M98 25h6M22 104h6" stroke="#f4f0e8" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Skibskob">
+  <defs>
+    <linearGradient id="purchaseGlow" x1="18" y1="106" x2="110" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9bd56b"/>
+      <stop offset="0.55" stop-color="#42c2ba"/>
+      <stop offset="1" stop-color="#f1c84b"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="18" fill="#080d14"/>
+  <path d="M25 32h13l9 45h43l12-31H47" fill="none" stroke="url(#purchaseGlow)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="55" cy="94" r="8" fill="#9bd56b"/>
+  <circle cx="88" cy="94" r="8" fill="#9bd56b"/>
+  <path d="M62 28h31l9 10-9 10H62z" fill="#121a25" stroke="#f1c84b" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M69 38h19" stroke="#f4f0e8" stroke-width="5" stroke-linecap="round"/>
+</svg>
