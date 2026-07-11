@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Constellation Taurus">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111820"/><stop offset="1" stop-color="#28313b"/></linearGradient></defs>
+  <rect width="720" height="420" rx="18" fill="url(#bg)"/>
+  <path d="M92 310h536" stroke="#596170" stroke-width="2"/>
+  <path d="M126 204l98-34h272l98 34-96 46H222l-96-46Z" fill="#c9cfd5" stroke="#f1c84b" stroke-width="4"/>
+  <path d="M246 170l60-42h108l60 42" fill="none" stroke="#8d99a6" stroke-width="18" stroke-linecap="round"/>
+  <path d="M224 250l-48 42h96l44-42M496 250l48 42h-96l-44-42" fill="#6b7582" stroke="#c9cfd5" stroke-width="3"/>
+  <rect x="310" y="186" width="100" height="34" rx="16" fill="#42c2ba" opacity=".65"/>
+  <circle cx="188" cy="205" r="18" fill="#20252e" stroke="#f1c84b" stroke-width="3"/>
+  <circle cx="532" cy="205" r="18" fill="#20252e" stroke="#f1c84b" stroke-width="3"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Constellation Taurus</text>
+  <text x="42" y="98" fill="#f1c84b" font-family="Segoe UI, Arial" font-size="18" font-weight="700">RSI · freight / tractor</text>
+</svg>

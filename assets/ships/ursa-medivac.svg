@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Ursa Medivac">
+  <rect width="720" height="420" rx="18" fill="#111820"/>
+  <path d="M78 314h564" stroke="#596170" stroke-width="2"/>
+  <path d="M150 218h404l48 48-46 38H180l-52-42 22-44Z" fill="#e5e8ea" stroke="#9bd56b" stroke-width="4"/>
+  <path d="M242 218l48-58h136l56 58" fill="#596170" stroke="#e5e8ea" stroke-width="3"/>
+  <rect x="326" y="234" width="78" height="48" rx="8" fill="#ef756f"/>
+  <path d="M365 242v32M349 258h32" stroke="#f4f0e8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="226" cy="306" r="30" fill="#20252e" stroke="#cfd5db" stroke-width="7"/>
+  <circle cx="500" cy="306" r="30" fill="#20252e" stroke="#cfd5db" stroke-width="7"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Ursa Medivac</text>
+  <text x="42" y="98" fill="#9bd56b" font-family="Segoe UI, Arial" font-size="18" font-weight="700">RSI · ground medical</text>
+</svg>

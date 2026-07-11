@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Cutlass Black">
+  <rect width="720" height="420" rx="18" fill="#11161d"/>
+  <path d="M80 300h560" stroke="#596170" stroke-width="2"/>
+  <path d="M142 218l146-72h164l126 72-116 58H248l-106-58Z" fill="#252c35" stroke="#ef756f" stroke-width="4"/>
+  <path d="M286 146l-42 98h-96l76-72M434 146l48 98h96l-82-72" fill="#3a424d" stroke="#9aa4ad" stroke-width="3"/>
+  <path d="M286 190h152l-30 36h-94z" fill="#42c2ba" opacity=".65"/>
+  <path d="M198 250l-42 46h122l34-46M522 250l42 46H442l-34-46" fill="#151b22" stroke="#596170" stroke-width="4"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Cutlass Black</text>
+  <text x="42" y="98" fill="#ef756f" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Drake · multirole</text>
+</svg>

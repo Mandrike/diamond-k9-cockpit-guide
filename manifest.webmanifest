@@ -1,0 +1,9 @@
+{
+  "name": "Diamond K9 Cockpit Guide",
+  "short_name": "DK9 Guide",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07090d",
+  "theme_color": "#07090d",
+  "description": "Lokal quick reference til Star Citizen skibe, guides og keybind-noter for Organization Diamond K9."
+}

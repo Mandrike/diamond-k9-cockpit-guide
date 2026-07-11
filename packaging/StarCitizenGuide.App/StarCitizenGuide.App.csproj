@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DiamondK9CockpitGuide</AssemblyName>
+    <RootNamespace>StarCitizenGuide</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\index.html">
+      <LogicalName>site/index.html</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\app.js">
+      <LogicalName>site/app.js</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\styles.css">
+      <LogicalName>site/styles.css</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\manifest.webmanifest">
+      <LogicalName>site/manifest.webmanifest</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\data\**\*">
+      <LogicalName>site/data/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\assets\**\*">
+      <LogicalName>site/assets/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(USERPROFILE)\Downloads\DiamondK9-Cockpit-Guide-Mark.png" Condition="Exists('$(USERPROFILE)\Downloads\DiamondK9-Cockpit-Guide-Mark.png')">
+      <LogicalName>site/assets/org/diamond-k9-mark.png</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

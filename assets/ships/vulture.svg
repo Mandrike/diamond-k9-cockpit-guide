@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Vulture">
+  <rect width="720" height="420" rx="18" fill="#11161d"/>
+  <path d="M82 304h556" stroke="#596170" stroke-width="2"/>
+  <path d="M164 212l128-70h150l112 70-74 70H236l-72-70Z" fill="#2b333d" stroke="#ef756f" stroke-width="4"/>
+  <path d="M242 238h-96l-54 46h156M478 238h102l46 46H470" fill="#596170" stroke="#cfd5db" stroke-width="3"/>
+  <path d="M470 184l106-62 34 18-100 90" fill="none" stroke="#f1c84b" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="612" cy="136" r="16" fill="#ef756f"/>
+  <rect x="316" y="166" width="86" height="28" rx="14" fill="#42c2ba" opacity=".65"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Vulture</text>
+  <text x="42" y="98" fill="#ef756f" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Drake · salvage</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Caterpillar">
+  <rect width="720" height="420" rx="18" fill="#11161d"/>
+  <path d="M78 304h564" stroke="#596170" stroke-width="2"/>
+  <path d="M104 214h420l92 46-72 34H132l-28-80Z" fill="#29313b" stroke="#ef756f" stroke-width="4"/>
+  <path d="M150 214v78M216 214v78M282 214v78M348 214v78M414 214v78M480 214v78" stroke="#596170" stroke-width="5"/>
+  <path d="M526 216l86-34 48 38-44 40" fill="#3d4651" stroke="#cfd5db" stroke-width="4"/>
+  <rect x="558" y="210" width="44" height="18" rx="9" fill="#42c2ba" opacity=".7"/>
+  <path d="M170 238h36M236 238h36M302 238h36M368 238h36M434 238h36" stroke="#f1c84b" stroke-width="5" stroke-linecap="round"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Caterpillar</text>
+  <text x="42" y="98" fill="#ef756f" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Drake · appendix cargo</text>
+</svg>

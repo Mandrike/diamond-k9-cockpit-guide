@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Diamond K9 Cockpit Guide</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=20260711-dk9">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="ship-rail" aria-label="Skibe">
+      <header class="brand-block">
+        <div class="brand-mark" aria-hidden="true">DK9</div>
+        <div class="brand-copy">
+          <p class="eyebrow">Star Citizen</p>
+          <h1>Diamond K9 Cockpit Guide</h1>
+          <a class="org-name" href="https://robertsspaceindustries.com/en/orgs/DK9" target="_blank" rel="noopener noreferrer">Organization Diamond K9 [DK9]</a>
+        </div>
+      </header>
+
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Søg hovedfane, skib eller rolle">
+      </label>
+
+      <div class="filter-row" aria-label="Rollefilter">
+        <button class="filter-chip is-active" type="button" data-filter="all">Alle</button>
+        <button class="filter-chip" type="button" data-filter="owned">Mine</button>
+        <button class="filter-chip" type="button" data-filter="industry">Industri</button>
+        <button class="filter-chip" type="button" data-filter="combat">Combat</button>
+        <button class="filter-chip" type="button" data-filter="support">Support</button>
+      </div>
+
+      <nav id="shipList" class="ship-list" aria-label="Skibsliste"></nav>
+    </aside>
+
+    <main class="command-deck">
+      <header class="deck-topbar">
+        <div>
+          <p id="shipStatus" class="eyebrow">Mine skibe</p>
+          <h2 id="shipName">Vælg et skib</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="focusButton" class="icon-button" type="button" title="Fokustilstand" aria-label="Fokustilstand">▣</button>
+          <button id="printButton" class="icon-button" type="button" title="Print" aria-label="Print">⎙</button>
+        </div>
+      </header>
+
+      <section class="ship-brief" aria-labelledby="shipName">
+        <div class="brief-copy">
+          <div id="roleTags" class="tag-row"></div>
+          <p id="shipSummary" class="ship-summary"></p>
+          <div id="shipStats" class="stat-grid"></div>
+        </div>
+        <div class="ship-visual" aria-hidden="true">
+          <img id="shipImage" src="assets/cockpit-panel.svg" alt="">
+          <div id="shipCallsign" class="ship-callsign"></div>
+        </div>
+      </section>
+
+      <section id="shipGuideDirectory" class="ship-guide-directory" aria-label="Skibsguides og individuelle keybindings" hidden>
+        <header class="directory-header">
+          <div>
+            <p class="eyebrow">Skibsguides</p>
+            <h3>Skibe, funktioner og individuelle keys</h3>
+          </div>
+          <label class="directory-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="shipGuideSearchInput" type="search" autocomplete="off" placeholder="Søg Vulture, Prospector, mining, cargo, medical">
+          </label>
+        </header>
+
+        <div class="directory-filters" aria-label="Skibsguide filter">
+          <button class="directory-filter is-active" type="button" data-guide-filter="all">Alle</button>
+          <button class="directory-filter" type="button" data-guide-filter="owned">Mine</button>
+          <button class="directory-filter" type="button" data-guide-filter="cargo">Cargo</button>
+          <button class="directory-filter" type="button" data-guide-filter="industry">Industri</button>
+          <button class="directory-filter" type="button" data-guide-filter="combat">Combat</button>
+          <button class="directory-filter" type="button" data-guide-filter="support">Support</button>
+          <button class="directory-filter" type="button" data-guide-filter="ground vehicle">Ground</button>
+          <button class="directory-filter" type="button" data-guide-filter="appendix">Appendix</button>
+        </div>
+
+        <div id="shipGuideItemList" class="ship-guide-item-list"></div>
+      </section>
+
+      <section class="quick-deck" aria-label="Quick mode og salg">
+        <div class="quick-column">
+          <header class="section-header">
+            <p class="eyebrow">Quick mode</p>
+            <h3>Vigtigste actions</h3>
+          </header>
+          <div id="quickActionList" class="quick-action-list"></div>
+        </div>
+
+        <div class="quick-column">
+          <header class="section-header">
+            <p class="eyebrow">Salg</p>
+            <h3 id="saleTitle">Steder og flow</h3>
+          </header>
+          <div id="saleInfoList" class="sale-info-list"></div>
+        </div>
+      </section>
+
+      <section id="systemDirectory" class="system-directory" aria-label="Solsystemer directory" hidden>
+        <header class="directory-header">
+          <div>
+            <p class="eyebrow">Solsystemer</p>
+            <h3>Stanton, Pyro og Nyx</h3>
+          </div>
+          <label class="directory-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="systemSearchInput" type="search" autocomplete="off" placeholder="Søg refinery, RMC, Levski, Ruin, ARC-L1">
+          </label>
+        </header>
+
+        <div id="systemSelectorList" class="system-selector-list" aria-label="Vælg solsystem"></div>
+
+        <div class="directory-filters" aria-label="Solsystemer filter">
+          <button class="directory-filter is-active" type="button" data-system-filter="all">Alle</button>
+          <button class="directory-filter" type="button" data-system-filter="mining">Mining</button>
+          <button class="directory-filter" type="button" data-system-filter="salvage">Salvage</button>
+          <button class="directory-filter" type="button" data-system-filter="refinery">Refinery</button>
+          <button class="directory-filter" type="button" data-system-filter="sale">Salg</button>
+          <button class="directory-filter" type="button" data-system-filter="station">Station</button>
+          <button class="directory-filter" type="button" data-system-filter="shop">Shop</button>
+        </div>
+
+        <div id="systemLocationList" class="system-location-list"></div>
+      </section>
+
+      <section id="purchaseDirectory" class="purchase-directory" aria-label="Skibskøb og køretøjskøb" hidden>
+        <header class="directory-header">
+          <div>
+            <p class="eyebrow">Skibskøb</p>
+            <h3>In-game priser og forhandlere</h3>
+          </div>
+          <label class="directory-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="purchaseSearchInput" type="search" autocomplete="off" placeholder="Søg Taurus, C2, ROC, Lorville, ground">
+          </label>
+        </header>
+
+        <div class="directory-filters" aria-label="Købsfilter">
+          <button class="directory-filter is-active" type="button" data-purchase-filter="all">Alle</button>
+          <button class="directory-filter" type="button" data-purchase-filter="owned">Mine</button>
+          <button class="directory-filter" type="button" data-purchase-filter="cargo">Cargo</button>
+          <button class="directory-filter" type="button" data-purchase-filter="industry">Industri</button>
+          <button class="directory-filter" type="button" data-purchase-filter="combat">Combat</button>
+          <button class="directory-filter" type="button" data-purchase-filter="support">Support</button>
+          <button class="directory-filter" type="button" data-purchase-filter="ground">Ground</button>
+          <button class="directory-filter" type="button" data-purchase-filter="transport">Transport</button>
+        </div>
+
+        <div id="purchaseItemList" class="purchase-item-list"></div>
+      </section>
+
+      <section id="loadoutDirectory" class="loadout-directory" aria-label="Loadouts og komponentkøb" hidden>
+        <header class="directory-header">
+          <div>
+            <p class="eyebrow">Loadouts</p>
+            <h3>Komponenter, våben og køb</h3>
+          </div>
+          <label class="directory-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="loadoutSearchInput" type="search" autocomplete="off" placeholder="Søg Taurus, Hemera, shield, våben, mining">
+          </label>
+        </header>
+
+        <div class="directory-filters" aria-label="Loadoutfilter">
+          <button class="directory-filter is-active" type="button" data-loadout-filter="all">Alle</button>
+          <button class="directory-filter" type="button" data-loadout-filter="owned">Mine</button>
+          <button class="directory-filter" type="button" data-loadout-filter="cargo">Cargo</button>
+          <button class="directory-filter" type="button" data-loadout-filter="industry">Industri</button>
+          <button class="directory-filter" type="button" data-loadout-filter="combat">Combat</button>
+          <button class="directory-filter" type="button" data-loadout-filter="support">Support</button>
+          <button class="directory-filter" type="button" data-loadout-filter="ground">Ground</button>
+          <button class="directory-filter" type="button" data-loadout-filter="appendix">Appendix</button>
+        </div>
+
+        <div id="loadoutItemList" class="loadout-item-list"></div>
+      </section>
+
+      <nav id="modeTabs" class="mode-tabs" aria-label="Guideområde"></nav>
+
+      <section class="content-grid">
+        <div class="content-column">
+          <header class="section-header">
+            <p class="eyebrow">Flow</p>
+            <h3 id="flowTitle">Aktivitetsflow</h3>
+          </header>
+          <ol id="procedureList" class="procedure-list"></ol>
+        </div>
+
+        <div class="content-column">
+          <header class="section-header">
+            <p class="eyebrow">Taster</p>
+            <h3>Hurtigknapper</h3>
+          </header>
+          <div id="keybindList" class="keybind-list"></div>
+        </div>
+
+        <div class="content-column notes-column">
+          <header class="section-header">
+            <p class="eyebrow">Drift</p>
+            <h3>Loadout og noter</h3>
+          </header>
+          <div id="noteList" class="note-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data/ships.js?v=20260711-dk9"></script>
+  <script src="app.js?v=20260711-dk9"></script>
+</body>
+</html>

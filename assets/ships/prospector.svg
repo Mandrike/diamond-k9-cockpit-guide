@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Prospector">
+  <rect width="720" height="420" rx="18" fill="#12171d"/>
+  <path d="M78 306h564" stroke="#596170" stroke-width="2"/>
+  <path d="M230 214l84-70h116l84 70-54 64H284l-54-64Z" fill="#d7d0bf" stroke="#f1c84b" stroke-width="4"/>
+  <path d="M254 238h-90l-42 48h142M466 238h90l42 48H456" fill="#596170" stroke="#d7d0bf" stroke-width="3"/>
+  <path d="M462 206l124-42 18 24-114 72" fill="none" stroke="#f1c84b" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="608" cy="180" r="20" fill="#42c2ba" opacity=".7"/>
+  <rect x="320" y="166" width="80" height="30" rx="15" fill="#42c2ba" opacity=".65"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Prospector</text>
+  <text x="42" y="98" fill="#f1c84b" font-family="Segoe UI, Arial" font-size="18" font-weight="700">MISC · solo mining</text>
+</svg>

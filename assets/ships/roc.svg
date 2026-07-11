@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="ROC">
+  <rect width="720" height="420" rx="18" fill="#11161d"/>
+  <path d="M78 314h564" stroke="#596170" stroke-width="2"/>
+  <path d="M176 214h310l70 50-42 38H206l-54-42 24-46Z" fill="#d9bd72" stroke="#f1c84b" stroke-width="4"/>
+  <path d="M254 214l58-58h92l50 58" fill="#596170" stroke="#d9bd72" stroke-width="3"/>
+  <path d="M476 212l96-60 28 22-82 74" fill="none" stroke="#42c2ba" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="226" cy="304" r="30" fill="#20252e" stroke="#cfd5db" stroke-width="7"/>
+  <circle cx="476" cy="304" r="30" fill="#20252e" stroke="#cfd5db" stroke-width="7"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">ROC</text>
+  <text x="42" y="98" fill="#f1c84b" font-family="Segoe UI, Arial" font-size="18" font-weight="700">Greycat · ground mining</text>
+</svg>

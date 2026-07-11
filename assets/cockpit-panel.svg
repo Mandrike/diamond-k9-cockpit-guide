@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Cockpit panel">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#29313b"/>
+      <stop offset="0.52" stop-color="#151b22"/>
+      <stop offset="1" stop-color="#0f1419"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#42c2ba" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#42c2ba" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="420" rx="18" fill="url(#panel)"/>
+  <path d="M68 78h584l-66 210H134L68 78Z" fill="#0f1419" stroke="#596170" stroke-width="4"/>
+  <path d="M112 104h496l-46 154H158l-46-154Z" fill="url(#glass)" stroke="#42c2ba" stroke-width="2"/>
+  <path d="M178 284h364l38 58H140l38-58Z" fill="#20252e" stroke="#596170" stroke-width="3"/>
+  <path d="M214 320h292" stroke="#f1c84b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M180 150h118M422 150h118M232 204h256" stroke="#42c2ba" stroke-width="3" stroke-linecap="round" opacity="0.72"/>
+  <circle cx="360" cy="182" r="48" fill="none" stroke="#f1c84b" stroke-width="5" opacity="0.78"/>
+  <path d="M360 126v36M360 202v36M304 182h36M380 182h36" stroke="#f1c84b" stroke-width="4" stroke-linecap="round" opacity="0.78"/>
+  <g fill="#ef756f">
+    <circle cx="210" cy="318" r="10"/>
+    <circle cx="250" cy="318" r="10"/>
+    <circle cx="470" cy="318" r="10"/>
+    <circle cx="510" cy="318" r="10"/>
+  </g>
+  <g fill="#9bd56b">
+    <rect x="294" y="306" width="32" height="24" rx="5"/>
+    <rect x="338" y="306" width="32" height="24" rx="5"/>
+    <rect x="382" y="306" width="32" height="24" rx="5"/>
+  </g>
+</svg>

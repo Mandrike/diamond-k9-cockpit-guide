@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="ARGO MOLE">
+  <rect width="720" height="420" rx="18" fill="#12171d"/>
+  <path d="M80 306h560" stroke="#596170" stroke-width="2"/>
+  <path d="M168 214l112-72h160l112 72-64 66H232l-64-66Z" fill="#e09b3a" stroke="#f1c84b" stroke-width="4"/>
+  <path d="M202 246h-86l-34 44h142M518 246h86l34 44H496" fill="#5b6570" stroke="#d7d0bf" stroke-width="3"/>
+  <path d="M256 186h-90M360 174v-78M464 186h90" stroke="#42c2ba" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="162" cy="186" r="18" fill="#42c2ba"/><circle cx="360" cy="92" r="18" fill="#42c2ba"/><circle cx="558" cy="186" r="18" fill="#42c2ba"/>
+  <rect x="306" y="178" width="108" height="32" rx="16" fill="#20252e"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">ARGO MOLE</text>
+  <text x="42" y="98" fill="#f1c84b" font-family="Segoe UI, Arial" font-size="18" font-weight="700">ARGO · crew mining</text>
+</svg>

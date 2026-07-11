@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Scorpius">
+  <rect width="720" height="420" rx="18" fill="#11151a"/>
+  <path d="M88 302h544" stroke="#596170" stroke-width="2"/>
+  <path d="M360 126l64 74-64 84-64-84 64-74Z" fill="#cfd5db" stroke="#ef756f" stroke-width="4"/>
+  <path d="M316 168L132 92l124 132-124 104 184-66M404 168l184-76-124 132 124 104-184-66" fill="#3c4652" stroke="#cfd5db" stroke-width="4"/>
+  <circle cx="360" cy="204" r="42" fill="#20252e" stroke="#f1c84b" stroke-width="4"/>
+  <path d="M326 204h68M360 170v68" stroke="#42c2ba" stroke-width="5" stroke-linecap="round"/>
+  <text x="42" y="68" fill="#f4f0e8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Scorpius</text>
+  <text x="42" y="98" fill="#ef756f" font-family="Segoe UI, Arial" font-size="18" font-weight="700">RSI · heavy fighter</text>
+</svg>
