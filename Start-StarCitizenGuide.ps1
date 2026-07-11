@@ -152,23 +152,16 @@ while (-not (Test-PortAvailable -CandidatePort $selectedPort)) {
 
 $python = Resolve-PythonCommand
 $url = "http://127.0.0.1:$selectedPort/"
-$orgAssetRoot = Join-Path $env:USERPROFILE 'Downloads'
 $serverScript = Join-Path $env:TEMP 'StarCitizenGuideServer.py'
 $serverCode = @'
 import functools
 import http.server
 import os
 import pathlib
-import posixpath
 import socketserver
 import sys
-import urllib.parse
 
 ROOT = pathlib.Path(os.environ["SC_GUIDE_ROOT"]).resolve()
-ORG_ROOT = pathlib.Path(os.environ.get("SC_GUIDE_ORG_ASSET_ROOT", "")).resolve()
-ORG_MAP = {
-    "diamond-k9-mark.png": "DiamondK9-Cockpit-Guide-Mark.png",
-}
 
 
 class GuideHandler(http.server.SimpleHTTPRequestHandler):
@@ -177,25 +170,6 @@ class GuideHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header("Pragma", "no-cache")
         self.send_header("Expires", "0")
         super().end_headers()
-
-    def translate_path(self, path):
-        parsed_path = urllib.parse.urlparse(path).path
-        normalized = posixpath.normpath(urllib.parse.unquote(parsed_path)).lstrip("/")
-
-        if normalized.startswith("assets/org/"):
-            requested_name = normalized.rsplit("/", 1)[-1]
-            mapped_name = ORG_MAP.get(requested_name)
-            if mapped_name:
-                candidate = (ORG_ROOT / mapped_name).resolve()
-                try:
-                    candidate.relative_to(ORG_ROOT)
-                except ValueError:
-                    pass
-                else:
-                    if candidate.is_file():
-                        return str(candidate)
-
-        return super().translate_path(path)
 
 
 class ThreadingServer(socketserver.ThreadingTCPServer):
@@ -211,10 +185,8 @@ if __name__ == "__main__":
 
 Set-Content -LiteralPath $serverScript -Value $serverCode -Encoding UTF8
 $env:SC_GUIDE_ROOT = $root
-$env:SC_GUIDE_ORG_ASSET_ROOT = $orgAssetRoot
 
 Write-Host "Serving Diamond K9 Cockpit Guide from $root"
-Write-Host "Organization assets: $orgAssetRoot"
 Write-Host "URL: $url"
 Write-Host "Press Ctrl+C to stop."
 

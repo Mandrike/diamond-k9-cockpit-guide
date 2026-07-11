@@ -76,7 +76,7 @@ The app separates guide areas like this:
 - `Skibskøb`: searchable in-game UEC prices and buy locations for the guide ships plus practical transport and ground vehicles. Prices are sourced from UEX and should be live-checked before large purchases.
 - `Loadouts`: searchable buyable component and weapon shortlists per ship, with UEX/Erkul links. The section prefers direct in-game purchases and flags stronger parts when they appear to be rent/craft/loot-only.
 
-The Diamond K9 PNG artwork is referenced as `assets/org/diamond-k9-mark.png`. The local PowerShell server maps that path to `%USERPROFILE%\Downloads\DiamondK9-Cockpit-Guide-Mark.png`, and the portable EXE embeds it during build. This avoids copying large binary files into the OneDrive workspace.
+The Diamond K9 PNG artwork is committed under `assets/org/diamond-k9-mark.png`, and browser/PWA icons are committed under `assets/icons/`. GitHub Pages, the local PowerShell server, and the portable EXE all serve those repository assets directly.
 
 The initial keybind set is based on the standard keyboard/mouse layout documented by Star Citizen community references and the in-game reset/profile workflow from RSI support. Star Citizen keybinds can drift between patches, so verify critical commands in-game after major updates.
 

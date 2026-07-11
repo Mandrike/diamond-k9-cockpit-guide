@@ -101,23 +101,6 @@ function New-ResourceFile {
     }
 }
 
-function Get-OrgImageResourceFiles {
-    $downloads = Join-Path $env:USERPROFILE 'Downloads'
-    $orgImages = @(
-        @{ File = 'DiamondK9-Cockpit-Guide-Mark.png'; LogicalName = 'site/assets/org/diamond-k9-mark.png' }
-    )
-
-    foreach ($image in $orgImages) {
-        $path = Join-Path $downloads $image.File
-        if (Test-Path -LiteralPath $path) {
-            New-ResourceFile -FullName $path -LogicalName $image.LogicalName
-        }
-        else {
-            Write-Warning "Optional organization image missing: $path"
-        }
-    }
-}
-
 function Get-SiteResourceFiles {
     $directFiles = @(
         'index.html',
@@ -135,7 +118,7 @@ function Get-SiteResourceFiles {
             New-ResourceFile -FullName $_.FullName -LogicalName "site/$relativePath"
         }
 
-    return @($directFiles + $nestedFiles + (Get-OrgImageResourceFiles))
+    return @($directFiles + $nestedFiles)
 }
 
 if (Test-DotNetSdkAvailable) {

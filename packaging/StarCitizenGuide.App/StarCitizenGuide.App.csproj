@@ -28,8 +28,5 @@
     <EmbeddedResource Include="..\..\assets\**\*">
       <LogicalName>site/assets/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(USERPROFILE)\Downloads\DiamondK9-Cockpit-Guide-Mark.png" Condition="Exists('$(USERPROFILE)\Downloads\DiamondK9-Cockpit-Guide-Mark.png')">
-      <LogicalName>site/assets/org/diamond-k9-mark.png</LogicalName>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>
